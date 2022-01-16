@@ -1,0 +1,420 @@
+:root {
+  --lila: #c3c9f1;
+  --celeste: #c3e0f1;
+  --verde: #c3f1eb;
+  --texto: "Open Sans", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+Body {
+  font-size: 16px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+/** Navegación **/
+
+nav {
+  width: 100%;
+  height: 15rem;
+  background-color: var(--lila);
+}
+
+nav ul {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  width: 50%;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+nav ul li:hover {
+  background-color: #fff;
+  border-radius: 2rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.seleccionado {
+  background-color: #fff;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+  nav {
+    height: 5rem;
+    position: sticky;
+    top: 0;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li {
+    height: 100%;
+    border-right: 0.2rem solid #fff;
+  }
+
+  nav ul li a {
+    position: relative;
+    top: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  nav ul li:hover {
+    border-radius: 0;
+  }
+
+  .seleccionado {
+    border-radius: 0;
+    border: 0.2rem solid var(--lila);
+  }
+}
+
+/** Footer **/
+
+footer {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  background-color: var(--lila);
+  margin-top: 3rem;
+}
+
+footer svg {
+  margin-top: 1rem;
+}
+
+.ig,
+.wpp {
+  width: 5rem;
+  text-align: center;
+}
+
+.ig:hover,
+.wpp:hover {
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+@media (min-width: 480px) {
+  footer {
+    gap: 10rem;
+  }
+}
+
+/** Header Sobre Mi **/
+
+.sobre-mi_titulo h1 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  font-family: var(--texto);
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 0.2rem solid var(--celeste);
+}
+.punto {
+  font-size: 4rem;
+  color: var(--celeste);
+}
+
+.sobre-mi_titulo p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.negrita {
+  font-weight: bold;
+}
+
+@media (min-width: 480px) {
+  .sobre-mi_titulo h1 {
+    font-size: 3.5rem;
+    width: 70%;
+  }
+
+  .punto {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .sobre-mi_titulo h1 {
+    width: 52%;
+    font-size: 4.3rem;
+  }
+
+  .sobre-mi_titulo p {
+    font-size: 1.5rem;
+  }
+}
+
+/** Caja Main (sobre mi) **/
+
+.caja-sobre_mi {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.75);
+}
+
+.caja-sobre_mi h2 {
+  text-transform: uppercase;
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-bottom: 0.2rem solid var(--celeste);
+}
+
+.img {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.caja-sobre_mi img {
+  border-radius: 50%;
+  border: 0.1rem solid #000;
+  transition: 0.6s;
+}
+
+.caja-sobre_mi img:hover {
+  border-radius: 2rem;
+  transition: 0.6s;
+}
+
+.caja-sobre_mi h3 {
+  text-align: center;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+.choclo {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 0 2rem 0;
+}
+#lo-se {
+  font-size: 1rem;
+}
+
+@media (min-width: 480px) {
+  .caja-sobre_mi h2 {
+    font-size: 3rem;
+  }
+
+  .caja-sobre_mi h3 {
+    font-size: 2.3rem;
+  }
+
+  .choclo {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .caja-sobre_mi h2 {
+    font-size: 3.4rem;
+  }
+
+  .caja-sobre_mi h3 {
+    font-size: 2.6rem;
+  }
+
+  .choclo {
+    font-size: 2.2rem;
+  }
+
+  #lo-se {
+    font-size: 1.5rem;
+  }
+}
+
+/** Blondie **/
+
+.caja-blondie {
+  width: 100%;
+}
+
+.grid-blondie {
+  width: 100%;
+  height: 100rem;
+  display: grid;
+  grid-template-rows: repeat (5, 1fr);
+  gap: 1rem;
+  margin: 1rem auto;
+}
+
+#img1 {
+  grid-row: 1/2;
+  background-image: url(../img/blondie1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#img2 {
+  grid-row: 2/3;
+  background-image: url(../img/blondie2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#img3 {
+  grid-row: 3/4;
+  background-image: url(../img/blondie3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#img4 {
+  grid-row: 4/5;
+  background-image: url(../img/blondie4.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#img5 {
+  grid-row: 5/6;
+  background-image: url(../img/blondie5.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (min-width: 480px) {
+  .grid-blondie {
+    height: 130rem;
+  }
+
+  #img2,
+  #img1,
+  #img3,
+  #img4,
+  #img5 {
+    background-position: center top;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-blondie {
+    grid-template-columns: repeat (2, 1fr);
+    height: 150rem;
+    grid-auto-flow: column;
+  }
+
+  #img2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #img3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  #img4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  #img5 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
+
+/** Contacto **/
+
+.caja-contacto {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.caja-contacto h1 {
+  font-family: var(--texto);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  border: 0.3rem solid #000;
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.campos {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 0.2rem;
+}
+
+.label {
+  flex: 1;
+  text-align: end;
+  font-weight: bold;
+}
+
+.input {
+  flex: 3;
+  border: 0.1rem solid var(--lila);
+}
+
+.caja-boton {
+  width: 100%;
+  text-align: center;
+}
+
+.boton {
+  width: 50%;
+  height: 3rem;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  background-color: #fff;
+  border: 0.1rem solid #000;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #000;
+  color: var(--verde);
+  transition: 0.3s;
+}
