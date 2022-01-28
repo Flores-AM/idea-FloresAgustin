@@ -14,7 +14,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
-Body {
+body {
   font-size: 16px;
   font-family: "PT Sans Narrow", sans-serif;
 }
@@ -62,6 +62,10 @@ nav ul li a {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
+}
+
+.nav-blondie {
+  position: relative;
 }
 
 @media (min-width: 480px) {
@@ -115,14 +119,17 @@ footer svg {
 .ig,
 .wpp {
   width: 5rem;
+  border-radius: 50%;
   text-align: center;
+  transition: 0.5s;
 }
 
 .ig:hover,
 .wpp:hover {
+  transform: rotate(360deg);
   background-color: #fff;
   border-radius: 50%;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 @media (min-width: 480px) {
@@ -245,20 +252,47 @@ footer svg {
 }
 
 @media (min-width: 768px) {
+  .caja-sobre_mi {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .img {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-image: url(../img/incognito.jpeg);
+    margin: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #yo {
+    display: none;
+  }
+
   .caja-sobre_mi h2 {
     font-size: 3.4rem;
+    grid-column: 2/3;
   }
 
   .caja-sobre_mi h3 {
     font-size: 2.6rem;
+    grid-column: 2/3;
+    grid-row: 2/3;
   }
 
   .choclo {
     font-size: 2.2rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
   }
 
   #lo-se {
     font-size: 1.5rem;
+    grid-column: 2/3;
+    margin: 0 auto;
   }
 }
 
@@ -272,7 +306,7 @@ footer svg {
   width: 100%;
   height: 100rem;
   display: grid;
-  grid-template-rows: repeat (5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
   margin: 1rem auto;
 }
@@ -357,8 +391,6 @@ footer svg {
 .caja-contacto {
   width: 90%;
   margin: 0 auto;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .caja-contacto h1 {
@@ -371,11 +403,23 @@ footer svg {
 form {
   width: 100%;
   margin: 0 auto;
-  padding-top: 2rem;
-  padding-right: 2rem;
   border: 0.3rem solid #000;
   border-radius: 1rem;
   background-color: #fff;
+}
+
+.form-control {
+  font-size: 1.3rem;
+}
+
+.form-floating {
+  width: 80%;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.margin1 {
+  margin-top: 2rem;
 }
 
 .campos {
@@ -416,5 +460,184 @@ form {
   font-weight: bold;
   background-color: #000;
   color: var(--verde);
+  transform: scale(1.1);
   transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+  .caja-contacto {
+    width: 60%;
+  }
+}
+
+/** Lol **/
+
+.caja-irelia {
+  width: 70%;
+  margin: 7rem auto;
+  background-color: rgb(243, 242, 242);
+  border: 0.1rem solid #000;
+  border-radius: 2rem;
+}
+
+.imagen-irelia {
+  width: 100%;
+  height: 30rem;
+  background-image: url(../img/irelia.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.id {
+  text-align: center;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.id a img {
+  transition: 0.5s;
+}
+
+.id a img:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.padding0 {
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.flex-li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.flex-li label {
+  width: 100%;
+  text-align: center;
+  transition: 1s;
+}
+
+.flex-li li {
+  width: 4rem;
+  height: 4rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.1rem solid rgb(194, 191, 191);
+  transition: 2.5s;
+  text-align: center;
+}
+
+.flex-li li p {
+  color: rgba(0, 0, 0, 0);
+  margin-top: 0.5rem;
+  transition: 2.5s;
+}
+
+.flex-li:hover label {
+  font-weight: bold;
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.flex-li:hover p {
+  color: #000;
+  transition-delay: 1s;
+}
+
+.flex-li:hover #azul {
+  width: 50%;
+  border-radius: 2rem;
+  background-color: rgba(250, 235, 105, 0.534);
+  transition: 2s;
+}
+.flex-li:hover #verde {
+  background-color: rgba(150, 221, 226, 0.452);
+  width: 30%;
+  border-radius: 2rem;
+  transition: 2s;
+}
+
+.flex-li:hover #rojo {
+  background-color: rgba(123, 223, 131, 0.452);
+  width: 100%;
+  border-radius: 2rem;
+  transition: 3s;
+}
+
+@media (min-width: 768px) {
+  .caja-irelia {
+    width: 50%;
+  }
+
+  .flex-li {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .flex-li label {
+    width: 20%;
+    text-align: right;
+  }
+
+  .flex-li li {
+    margin: 0;
+  }
+
+  .flex-li:hover #azul {
+    width: 4rem;
+    transform: translateX(15rem);
+  }
+
+  .flex-li:hover #verde {
+    width: 4rem;
+    transform: translateX(10rem);
+  }
+
+  .flex-li:hover #rojo {
+    width: 4rem;
+    transform: translateX(24rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .flex-li:hover #azul {
+    width: 4rem;
+    transform: translateX(20rem);
+  }
+
+  .flex-li:hover #verde {
+    width: 4rem;
+    transform: translateX(15rem);
+  }
+
+  .flex-li:hover #rojo {
+    width: 4rem;
+    transform: translateX(35rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .flex-li:hover #azul {
+    width: 4rem;
+    transform: translateX(30rem);
+  }
+
+  .flex-li:hover #verde {
+    width: 4rem;
+    transform: translateX(20rem);
+  }
+
+  .flex-li:hover #rojo {
+    width: 4rem;
+    transform: translateX(45rem);
+  }
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>No Tengo Imaginación</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +16,12 @@
     />
   </head>
   <body>
-    <nav id="navegacion">
+    <nav
+      data-aos="fade-down"
+      data-aos-duration="2000"
+      id="navegacion"
+      class="nav-blondie"
+    >
       <ul>
         <li>
           <a href="../index.html">Sobre Mi</a>
@@ -29,17 +35,32 @@
 
     <main class="caja-blondie">
       <section class="grid-blondie">
-        <div id="img1"></div>
-        <div id="img2"></div>
-        <div id="img3"></div>
-        <div id="img4"></div>
-        <div id="img5"></div>
+        <div id="img1" data-aos="fade-right" data-aos-duration="3000"></div>
+        <div id="img2" data-aos="fade-left" data-aos-duration="3000"></div>
+        <div
+          id="img3"
+          data-aos="fade-up-right"
+          data-aos-offset="300"
+          data-aos-duration="3000"
+        ></div>
+        <div
+          id="img4"
+          data-aos="fade-up-left"
+          data-aos-offset="300"
+          data-aos-duration="3000"
+        ></div>
+        <div
+          id="img5"
+          data-aos="flip-up"
+          data-aos-offset="200"
+          data-aos-duration="3000"
+        ></div>
       </section>
     </main>
 
     <footer>
       <div class="ig">
-        <a href="#" target="blank"
+        <a href="https://www.instagram.com/agustinmatiasf/" target="blank"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-brand-instagram"
@@ -61,7 +82,10 @@
       </div>
 
       <div class="wpp">
-        <a href="#" target="blank">
+        <a
+          href="https://api.whatsapp.com/send?phone=541168755955"
+          target="blank"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-brand-whatsapp"
@@ -83,5 +107,10 @@
         </a>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
