@@ -1,0 +1,53 @@
+.caja-contacto {
+  width: 90%;
+  margin: 0 auto;
+  h1 {
+    font-family: $texto;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    .punto {
+      font-size: 4rem;
+      color: $verde;
+    }
+  }
+  form {
+    width: 100%;
+    margin: 0 auto;
+    border: 0.3rem solid #000;
+    border-radius: 1rem;
+    background-color: #fff;
+    .form-floating {
+      width: 80%;
+      margin: 0 auto;
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+  }
+  .caja-boton {
+    width: 100%;
+    text-align: center;
+    .boton {
+      width: 50%;
+      height: 3rem;
+      margin: 2rem 0;
+      text-transform: uppercase;
+      background-color: #fff;
+      border: 0.1rem solid #000;
+      transition: 0.3s;
+    }
+    .boton:hover {
+      cursor: pointer;
+      font-weight: bold;
+      background-color: #000;
+      color: $verde;
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .caja-contacto {
+    width: 60%;
+  }
+}
